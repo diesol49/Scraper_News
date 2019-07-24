@@ -10,9 +10,13 @@ const ArticleSchema = new Schema ({
         type: String,
         required: true
     },
-    summary: {
+    teaser: {
         type: String,
         required: true
+    },
+    imgLink: {
+        type: String,
+        required: false
     },
     timestamp: {
         type: Date,
