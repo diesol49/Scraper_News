@@ -27,10 +27,10 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Connect to our API routes file
-// require("./routes/api-routes")(app);
+require("./routes/api-routes")(app);
 
 // connecting to Mongo
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scraper";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 let db = mongoose.connection;

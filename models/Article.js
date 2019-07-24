@@ -18,6 +18,10 @@ const ArticleSchema = new Schema ({
         type: Date,
         default: Date.now
     },
+    saved: {
+        type: Boolean,
+        default: false
+    },
     note: {
         type: Schema.Types.ObjectId,
         ref: "Note"
